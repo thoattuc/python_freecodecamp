@@ -1,5 +1,5 @@
-text = 'Hello Zaira'
-custom_key = 'python'
+text = 'mrttaqrhknsw ih puggrur'
+custom_key = 'happycoding'
 
 
 def vigenere(message, key, direction=1):
@@ -20,7 +20,7 @@ def vigenere(message, key, direction=1):
             # Define the offset and the encrypted/decrypted letter
             offset = alphabet.index(key_char)
             index = alphabet.find(char)
-            new_index = (index + offset * direction) % len(alphabet)
+            new_index = (index + offset*direction) % len(alphabet)
             final_message += alphabet[new_index]
 
     return final_message
@@ -29,11 +29,12 @@ def vigenere(message, key, direction=1):
 def encrypt(message, key):
     return vigenere(message, key)
 
+
 def decrypt(message, key):
     return vigenere(message, key, -1)
 
 
-encryption = encrypt(text, custom_key)
-print(encryption)
-decryption = decrypt(encryption, custom_key)
-print(decryption)
+print(f'\nEncrypted text: {text}')
+print(f'Key: {custom_key}')
+decryption = decrypt(text, custom_key)
+print(f'\nDecrypted text: {decryption}\n')
